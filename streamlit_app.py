@@ -2,8 +2,6 @@ import streamlit
 import pandas
 import requests
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -22,3 +20,5 @@ fruit_to_show = my_fruit_list.loc[fruit_selected]
 
 streamlit.dataframe(fruit_to_show)
 
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
